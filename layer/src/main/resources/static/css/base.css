@@ -1,0 +1,52 @@
+body{font-family:Verdana, Arial, sans-serif;overflow-y:hidden; background-color: black;}
+button{color:white !important;background:black !important; border-color:black !important; border-radius: 0px !important;}
+button:hover{background:#343434 !important;color: white !important;}
+btn{margin-bottom:1 !important;}
+ul.file-type-list {list-style-type:none;-webkit-padding-start:3px;}
+
+#box{z-index:9;position:absolute; }
+#others{padding-top:2%;}
+#media{background:#171717;padding:0px;}
+#player_msg{float:right;color:yellowgreen;font-size:120%;}
+#tree{overflow-y:scroll;background:#171717;}
+#root-txt{width:600px;background:black;coloror:white;font-size:110%;}
+#root-txt:focus{border:darkgreen; box-shadow: 2px 3px 4px #171717;}
+#notifier{color:yellowgreen;font-size:180%;}
+
+.area{position:relative; overflow-y:scroll; padding:0px;}
+.input-text{background:black; color:white;}
+.popover-content,.popover{max-width:430px !important;padding:1% !important;}
+.popover.right{opacity:0.95;background:black;}
+.popover.bottom{background:black;}
+.my-navbar{box-shadow:3px 4px 5px black; width:100%;}
+.my-folder{color:#b3b3b3; padding:0.4%;border-left:3px solid yellowgreen;}
+.my-folder:hover{color:yellowgreen; background: #303030;}
+.helper{width:400px;background:black;}
+.help-col{width:10%:font-size:160%;color:darkgreen;}
+
+.box-img{max-width: 100%; box-shadow:3px 4px 5px black;border:5px solid black;}
+.box-menu{box-shadow:3px 4px 5px black;}
+.thumb{padding:4px !important;}
+.thumb-select{opacity:0.7; border:1px solid black;}
+.thumb-count{background:black;color:darkgreen;font-size:130%;text-align:center;}
+.file-link{padding-left:0.5%;}
+.file-link:hover{color:yellowgreen;}
+.file-type{padding:2px; overflow:hidden;}
+.file-type-list{}
+.file-item:hover{background: #303030;color:yellowgreen;}
+.ui-widget-content{background:black;border:none;opacity:0.97;}
+.ui-dialog .ui-dialog-titlebar{display:none !important;}
+.ui-widget-header{background:#282828 !important; border:none !important;}
+.ui-autocomplete{background-color: #b3b3b3;}
+.tree{height:100%;border-left-colorer-right:1px solid #282828;}
+.message{color:yellowgreen;padding:5px;font-size:120%;}
+
+#tree::-webkit-scrollbar{ width: 8px;}
+#tree::-webkit-scrollbar-thumb{ background-color: #303030;}
+body::-webkit-scrollbar{ width: 8px;}
+body::-webkit-scrollbar-thumb{ background-color: #171717;}
+body::-webkit-scrollbar-track {background-color: black;}
+.area::-webkit-scrollbar{ width: 8px;}
+.area::-webkit-scrollbar-thumb{ background-color: #303030;}
+#media::-webkit-scrollbar{ width: 8px;}
+#media::-webkit-scrollbar-thumb{ background-color: #303030;}

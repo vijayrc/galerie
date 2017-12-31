@@ -1,0 +1,58 @@
+#if($myFiles.isEmpty())
+    <div class="alert alert-info">no files, check the path.</div>
+#else
+    <div id="gallery">
+        #foreach($imgFile in $myFiles.imgFiles())
+            <div class="thumb col-lg-2">
+                <img style="max-width:100%;"
+                     src="$imgFile.thumbPath()"
+                     orig="$imgFile.origPath()"
+                     alt="$imgFile.name()"
+                     description="$imgFile.description()"/>
+            </div>
+        #end
+    </div>
+    <div id="media">
+        #if($myFiles.hasNoMediaFiles())
+            <h2>No media files</h2>
+        #else
+            <span class="glyphicon glyphicon-list" style="color:yellow"> $myFiles.mediaCount()</span>
+            <span id="player_msg"></span>
+            <div id="file-types" style="padding-top:1%">
+                #set($groups = $myFiles.groupByExt())
+                #foreach($type in $groups.keySet())
+                    #showFilesByType($type $groups.get($type))
+                #end
+            </div>
+        #end
+    </div>
+#end
+
+#macro(showFilesByType $type $files)
+<div class="file-type" style="width:23%">
+    <ul class="file-type-list">
+        #foreach($file in $files)
+        <li>
+            #showExtIcon($type)
+            <span class="file-link" path="$file.origPath()">$file.name()</span>
+        </li>
+        #end
+    </ul>
+</div>
+#end
+
+#macro(showExtIcon $ext)
+  #if($ext.matches("(.*).(?i)(flv|mp4|mpeg|avi|webm|rm|divx|mpg|<mov></mov>|wmv|mkv|mp2)([0-9])"))
+    <span class="glyphicon glyphicon-film" style="color:indianred;padding-left:1%;"></span>
+  #elseif($ext.matches("(.*).(?i)(pdf|doc|docx|xls|xlsx|ppt|pptx)([0-9])"))
+    <span class="glyphicon glyphicon-star-empty" style="color:indianred;padding-left:1%;"></span>
+  #elseif($ext.matches("(.*).(?i)(swf)([0-9])"))
+    <span class="glyphicon glyphicon-flash" style="color:indianred;padding-left:1%;"></span>
+  #elseif($ext.matches("(.*).(?i)(htm|html)([0-9])"))
+    <span class="glyphicon glyphicon-cloud-download" style="color:indianred;padding-left:1%;"></span>
+  #elseif($ext.matches("(.*).(?i)(zip|rar|tar)([0-9])"))
+    <span class="glyphicon glyphicon-compressed" style="color:indianred;padding-left:1%;"></span>
+  #else
+    <span class="glyphicon glyphicon-file" style="color:indianred;padding-left:1%;"></span>
+  #end
+#end

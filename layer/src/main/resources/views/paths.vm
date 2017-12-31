@@ -1,0 +1,5 @@
+<ul>
+#foreach($path in $paths)
+    <li>$path</li>
+#end
+</ul>

@@ -1,0 +1,12 @@
+cd /projs/VRC5/galerie/
+gradle fatJar
+cp layer/build/libs/layer-1.0.jar ~/tools/galerie/layer.jar
+cp -r layer/src/main/resources/static ~/tools/galerie
+mkdir ~/tools/galerie/views
+cp -r layers/src/main/resources/views/* ~/tools/galerie/views
+cp -r simple/src/main/resources/views/* ~/tools/galerie/views
+cp simple/src/main/resources/spring.xml ~/tools/galerie/spring.xml
+cp simple/src/main/resources/log4j.xml ~/tools/galerie/log4j.xml
+cp simple/src/main/resources/config.properties ~/tools/galerie/config.properties
+edit config.properties for desired port, set/leave packaging=true
+java -jar layer.jar

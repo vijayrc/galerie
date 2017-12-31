@@ -1,0 +1,5 @@
+#if($success)
+$path
+#else
+ka boom!something broke: $path
+#end

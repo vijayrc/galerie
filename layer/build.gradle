@@ -1,0 +1,39 @@
+version = '1.0'
+group='com.vijayrc.galerie.layer'
+apply plugin: 'fatjar'
+
+dependencies {
+    compile project(':simple')
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'commons-io:commons-io:2.0.1'
+    compile 'log4j:log4j:1.2.16'
+    compile 'org.springframework:spring-context:4.0.3.RELEASE'
+    compile 'org.apache.lucene:lucene-core:4.4.0'
+    compile 'org.apache.lucene:lucene-analyzers:3.6.2'
+    compile 'org.apache.lucene:lucene-queries:4.4.0'
+    compile 'org.apache.lucene:lucene-queryparser:4.4.0'
+    compile 'org.apache.lucene:lucene-analyzers-common:4.4.0'
+    testCompile 'junit:junit:4.1'
+    testCompile 'org.mockito:mockito-all:1.9.5'
+    compile files('../lib/thumbnailator-0.4.7-all.jar')
+
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'eu.appsatori:gradle-fatjar-plugin:0.2-rc1'
+    }
+}
+jar {
+    manifest { attributes 'Main-Class': 'com.vijayrc.galerie.main.Galerie' }
+}
+fatJarPrepareFiles {
+    include 'META-INF/spring.handlers'
+    include 'META-INF/spring.schemas'
+}
+fatJar{
+    manifest { attributes 'Main-Class': 'com.vijayrc.galerie.main.Galerie' }
+    exclude '**/config.properties'
+}
