@@ -1,6 +1,6 @@
 version = '1.0'
 group='com.vijayrc.galerie.layer'
-apply plugin: 'fatjar'
+apply plugin: 'eu.appsatori.fatjar'
 
 dependencies {
     compile project(':simple')
@@ -21,9 +21,10 @@ dependencies {
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'eu.appsatori:gradle-fatjar-plugin:0.2-rc1'
+        classpath 'eu.appsatori:gradle-fatjar-plugin:0.3'
     }
 }
 jar {

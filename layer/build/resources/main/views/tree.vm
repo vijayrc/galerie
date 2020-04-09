@@ -1,0 +1,7 @@
+#if(!$myFolders.isEmpty())
+<ul class="file-type-list" parent="$parent" style="padding-bottom:5px;padding-left:10px;">
+    #foreach($myFolder in $myFolders)
+    <li path="$myFolder.path()" class="my-folder">$myFolder.name()</li>
+    #end
+</ul>
+#end

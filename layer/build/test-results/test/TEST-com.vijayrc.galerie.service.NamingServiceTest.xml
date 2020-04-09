@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vijayrc.galerie.service.NamingServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-09T15:43:04" hostname="vijayc-mac.local" time="0.025">
+  <properties/>
+  <testcase name="shouldShortenNames" classname="com.vijayrc.galerie.service.NamingServiceTest" time="0.025"/>
+  <system-out><![CDATA[11:43:04|FileService.isInvalidFolder|study9b| does not exist
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

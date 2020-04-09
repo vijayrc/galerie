@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vijayrc.galerie.domain.MyFileTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-09T15:43:04" hostname="vijayc-mac.local" time="0.003">
+  <properties/>
+  <testcase name="testThumbPath" classname="com.vijayrc.galerie.domain.MyFileTest" time="0.003"/>
+  <system-out><![CDATA[pic//home/vijayrc/pics/wallpapers/.galerie/rose-thumbnail.jpg
+pic//home/vijayrc/pics/wallpapers/rose.gif
+pic//home/vijayrc/pics/wallpapers/.galerie/ftop.ru_38144-thumbnail.jpg
+.jpg
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
