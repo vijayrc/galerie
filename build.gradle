@@ -7,7 +7,5 @@ subprojects{
     repositories {
         mavenLocal()
         mavenCentral()
-//        mavenRepo name:'maven-repo', url:'http://mvnrepository.com/artifact'
- //       mavenRepo name:'maven-hub',url:'http://mavenhub.com/mvn/central'
     }
 }
