@@ -16,7 +16,7 @@ node {
     }
 
     stage('Gradle build') {
-        buildInfo = rtGradle.run rootDir: ".", buildFile: 'build.gradle', tasks: 'clean jar'
+        buildInfo = rtGradle.run rootDir: ".", buildFile: 'build.gradle', tasks: 'clean uploadArchives -x test'
     }
 
     stage('Publish build info') {
