@@ -11,8 +11,8 @@ node {
         // Tool name from Jenkins configuration
         rtGradle.tool = "gradle_6.3"
         // Set Artifactory repositories for dependencies resolution and artifacts deployment.
-        rtGradle.deployer repo:'libs-snapshot-local'', server: server
-        rtGradle.resolver repo:''libs-release'', server: server
+        rtGradle.deployer repo: "libs-snapshot-local", server: server
+        rtGradle.resolver repo: "libs-release", server: server
     }
 
     stage('Gradle build') {
